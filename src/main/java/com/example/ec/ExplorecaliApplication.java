@@ -7,6 +7,7 @@ import com.example.ec.services.TourService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +21,9 @@ import static com.fasterxml.jackson.annotation.PropertyAccessor.FIELD;
 
 @SpringBootApplication
 public class ExplorecaliApplication implements CommandLineRunner {
+
+//    @Value("${ec.importFile}")
+//    private String importFile;
 
     @Autowired
     private TourPackageService tourPackageService;
