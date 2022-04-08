@@ -31,7 +31,8 @@ public class ExplorecaliApplication implements CommandLineRunner {
         SpringApplication.run(ExplorecaliApplication.class, args);
     }
 
-    private void loadToursAtStartup() throws IOException {
+    @Override
+    public void run(String... args) throws Exception {
         //Create the Tour Packages
         createTourPackages();
         long numOfPackages = tourPackageService.total();
@@ -71,11 +72,6 @@ public class ExplorecaliApplication implements CommandLineRunner {
                         importedTour.getPackageType(),
                         importedTour.getDifficulty(),
                         importedTour.getRegion()));
-    }
-
-    @Override
-    public void run(String... args) throws Exception {
-
     }
 
     /**
